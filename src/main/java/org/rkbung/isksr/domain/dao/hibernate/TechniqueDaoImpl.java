@@ -12,6 +12,7 @@ import java.util.Collection;
 
 public class TechniqueDaoImpl extends JpaDaoSupport implements TechniqueDao {
     @Override
+    @SuppressWarnings("unchecked")
     public Collection<Technique> getTechniques() {
         return getJpaTemplate().execute(new JpaCallback<Collection<Technique>>() {
             @Override
@@ -24,6 +25,7 @@ public class TechniqueDaoImpl extends JpaDaoSupport implements TechniqueDao {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public Collection<Technique> searchByName(final String name) {
         return getJpaTemplate().execute(new JpaCallback<Collection<Technique>>() {
             @Override
