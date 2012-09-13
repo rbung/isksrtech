@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.List;
 
 public interface TechniqueDao {
-    Collection<Technique> getTechniques();
+    List getTechniques();
 
     Technique getById(int id);
 
@@ -15,4 +15,6 @@ public interface TechniqueDao {
     Collection<Technique> searchByName(String name);
 
     Technique remove(Technique technique);
+
+    Technique update(Technique technique);
 }

@@ -1,7 +1,12 @@
 package org.rkbung.isksr.domain.model;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
 @Table(name = "TECHNIQUE")
 public class Technique extends BaseObject {
 

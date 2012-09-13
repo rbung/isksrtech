@@ -15,9 +15,7 @@
 		<property name="location" value="classpath:db.properties" />
 	</bean>
 
-    <bean id="techniqueDao" class="org.rkbung.isksr.domain.dao.hibernate.TechniqueDaoImpl">
-        <property name="entityManagerFactory" ref="entityManagerFactory"/>
-    </bean>
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
 
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">

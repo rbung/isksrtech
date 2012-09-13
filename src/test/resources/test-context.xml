@@ -13,6 +13,5 @@
 	<import resource="test-db.xml" />
 
 	<tx:annotation-driven />
-	<context:component-scan base-package="org.application" />	
 
 </beans>
