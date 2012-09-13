@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Collection;
@@ -17,7 +18,7 @@ import static org.junit.Assert.assertThat;
 
 @ContextConfiguration(locations = "classpath:test-context.xml")
 @RunWith(SpringJUnit4ClassRunner.class)
-public class TechniqueDaoImplTest {
+public class TechniqueDaoImplTest extends AbstractTransactionalJUnit4SpringContextTests {
     private static final Logger LOGGER = LoggerFactory
             .getLogger(TechniqueDaoImplTest.class);
 
