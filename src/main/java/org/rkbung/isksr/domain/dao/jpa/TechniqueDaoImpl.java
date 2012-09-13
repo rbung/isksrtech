@@ -1,4 +1,4 @@
-package org.rkbung.isksr.domain.dao.hibernate;
+package org.rkbung.isksr.domain.dao.jpa;
 
 import org.rkbung.isksr.domain.dao.TechniqueDao;
 import org.rkbung.isksr.domain.model.Technique;

@@ -1,4 +1,4 @@
-package org.rkbung.isksr.domain.dao.hibernate;
+package org.rkbung.isksr.domain.dao.jpa;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Collection;
 
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -54,5 +55,11 @@ public class TechniqueDaoImplTest extends AbstractTransactionalJUnit4SpringConte
         LOGGER.info("after update {}", technique3);
         techniques = techniqueDaoImpl.searchByName("search");
         assertThat(techniques.size(), is(3));
+        techniqueDaoImpl.remove(technique3);
+        techniqueDaoImpl.remove(technique5);
+        techniques = techniqueDaoImpl.searchByName("search");
+        assertThat(techniques.size(), is(1));
+        final Technique byId = techniqueDaoImpl.getById(50);
+        assertThat(byId, is(nullValue()));
     }
 }

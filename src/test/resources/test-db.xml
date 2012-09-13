@@ -43,7 +43,7 @@
 
 	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
 
-    <bean id="techniqueDao" class="org.rkbung.isksr.domain.dao.hibernate.TechniqueDaoImpl"/>
+    <bean id="techniqueDao" class="org.rkbung.isksr.domain.dao.jpa.TechniqueDaoImpl"/>
 
     <util:properties id="jpaProperties">
         <prop key="provider_class">
