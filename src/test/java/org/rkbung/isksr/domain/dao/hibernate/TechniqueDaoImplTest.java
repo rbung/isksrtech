@@ -27,14 +27,32 @@ public class TechniqueDaoImplTest extends AbstractTransactionalJUnit4SpringConte
 
     @Test
     public void testIntegration() throws Exception {
-        Technique technique = new Technique();
-        technique.setName("test nom");
-        final Technique save = techniqueDaoImpl.save(technique);
-        LOGGER.error("save {}", save);
+        Technique technique1 = new Technique();
+        technique1.setName("technique1");
+        Technique technique2 = new Technique();
+        technique2.setName("technique2");
+        Technique technique3 = new Technique();
+        technique3.setName("technique3");
+        Technique technique4 = new Technique();
+        technique4.setName("search1");
+        Technique technique5 = new Technique();
+        technique5.setName("2search");
+        techniqueDaoImpl.save(technique1);
+        techniqueDaoImpl.save(technique2);
+        LOGGER.info("before save {}", technique3);
+        techniqueDaoImpl.save(technique3);
+        LOGGER.info("after save {}", technique3);
+        techniqueDaoImpl.save(technique4);
+        techniqueDaoImpl.save(technique5);
         Collection<Technique> techniques = techniqueDaoImpl.getTechniques();
-        assertThat(techniques.size(), is(1));
-        techniqueDaoImpl.remove(technique);
-        techniques = techniqueDaoImpl.searchByName("test");
-        assertThat(techniques.size(), is(0));
+        assertThat(techniques.size(), is(5));
+        techniques = techniqueDaoImpl.searchByName("search");
+        assertThat(techniques.size(), is(2));
+        technique3.setName("search3");
+        LOGGER.info("before update {}", technique3);
+        techniqueDaoImpl.update(technique3);
+        LOGGER.info("after update {}", technique3);
+        techniques = techniqueDaoImpl.searchByName("search");
+        assertThat(techniques.size(), is(3));
     }
 }
