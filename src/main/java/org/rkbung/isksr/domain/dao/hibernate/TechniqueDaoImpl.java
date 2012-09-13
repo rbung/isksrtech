@@ -14,12 +14,12 @@ public class TechniqueDaoImpl implements TechniqueDao {
 
     @Override
     public List<Technique> getTechniques() {
-        return entityManager.createQuery("SELECT t FROM TECHNIQUE t").getResultList();
+        return entityManager.createQuery("SELECT t FROM Technique t").getResultList();
     }
 
     @Override
     public Collection<Technique> searchByName(final String name) {
-        return entityManager.createQuery("SELECT t FROM TECHNIQUE t WHERE t.name LIKE :name").setParameter("name", name).getResultList();
+        return entityManager.createQuery("SELECT t FROM Technique t WHERE t.name LIKE :name").setParameter("name", "%" + name + "%").getResultList();
     }
 
     @Override

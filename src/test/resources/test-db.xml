@@ -19,6 +19,7 @@
 				<property name="showSql" value="true" />
 				<property name="generateDdl" value="true" />
 				<property name="databasePlatform" value="${db.dialect}" />
+                <property name="database" value="HSQL"/>
 			</bean>
 		</property>
         <property name="dataSource" ref="dataSource"/>
