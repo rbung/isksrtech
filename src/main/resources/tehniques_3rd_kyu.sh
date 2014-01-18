@@ -47,4 +47,30 @@ curl -XPUT 'http://localhost:9200/techniques/technique/15' -d '{
 curl -XPUT 'http://localhost:9200/techniques/technique/16' -d '{
     "name" : "soto uke geri"
 }'
+curl -XPUT 'http://localhost:9200/techniques/technique/17' -d '{
+    "name" : "katate johaku maki"
+}'
+curl -XPUT 'http://localhost:9200/techniques/technique/18' -d '{
+    "name" : "katamuna otoshi"
+}'
+curl -XPUT 'http://localhost:9200/techniques/technique/19' -d '{
+    "name" : "soto uke zuki"
+}'
+curl -XPUT 'http://localhost:9200/techniques/technique/20' -d '{
+    "name" : "ude juji gatame"
+}'
+curl -XPUT 'http://localhost:9200/techniques/technique/21' -d '{
+    "name" : "uchi age geri"
+}'
+curl -XPUT 'http://localhost:9200/techniques/technique/22' -d '{
+    "name" : "shita uke zuki"
+}'
+curl -XPUT 'http://localhost:9200/techniques/technique/23' -d '{
+    "name" : "shita uke geri"
+}'
+curl -XPUT 'http://localhost:9200/techniques/technique/24' -d '{
+    "name" : "shita uke jun geri"
+}'
+
+
 
