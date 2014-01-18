@@ -71,6 +71,15 @@ curl -XPUT 'http://localhost:9200/techniques/technique/23' -d '{
 curl -XPUT 'http://localhost:9200/techniques/technique/24' -d '{
     "name" : "shita uke jun geri"
 }'
+curl -XPUT 'http://localhost:9200/techniques/technique/25' -d '{
+    "name" : "yoko tenshin geri"
+}'
+curl -XPUT 'http://localhost:9200/techniques/technique/26' -d '{
+    "name" : "juji uke geri"
+}'
+curl -XPUT 'http://localhost:9200/techniques/technique/27' -d '{
+    "name" : "fushi geri hiza uke nami gaeshi"
+}'
 
 
 
